@@ -1,0 +1,54 @@
+.fab-div {
+	position: absolute;
+	bottom: 16px;
+	right: 16px;
+}
+
+.fab {
+	margin-top: 10px;
+}
+
+.word-list {
+	min-height: 1rem;
+	font-size: 2rem;
+}
+
+.word-box {
+	margin: 0.5rem 0;
+	border-style: dotted;
+	border-width: 0.5px;
+	border-color: #444;
+	padding: 0 0.5rem;
+	flex-grow: 1;
+}
+
+.word {
+	display: inline-block;
+	width: 40%;
+}
+
+.part {
+	font-size: 1.5rem;
+}
+
+.note {
+	display: inline-block;
+	flex-grow: 1;
+	text-align: right;
+}
+
+.input {
+	display: flex;
+	justify-content: space-around;
+}
+
+/* Use css instead of <Stack> to do media querying */
+@media (max-width: 800px) {
+	.input {
+		flex-direction: column;
+	}
+
+	.input > * {
+		margin-top: 1rem;
+	}
+}
