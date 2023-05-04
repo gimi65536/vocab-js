@@ -24,7 +24,8 @@
 
 .word {
 	display: inline-block;
-	width: 40%;
+	min-width: 40%;
+	flex: 0 0 auto;
 }
 
 .part {
@@ -35,6 +36,8 @@
 	display: inline-block;
 	flex-grow: 1;
 	text-align: right;
+	overflow-wrap: break-word;
+	white-space: pre-line;
 }
 
 .input {
