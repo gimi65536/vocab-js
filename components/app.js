@@ -130,6 +130,7 @@ export default function App(){
 					aria-label="Upload"
 					className={styles.fab}
 					component="label"
+					sx={{ my: "10px" }}
 				>
 					<FileUploadIcon />
 					<input type="file" accept="application/json" hidden onChange={handleUpload} />
@@ -143,6 +144,7 @@ export default function App(){
 					component="a"
 					href={`data:text/json;chatset=utf-8,${encodeURIComponent(vocabToJSON(state.vocab))}`}
 					download="vocab.json"
+					sx={{ my: "10px" }}
 				>
 					<FileDownloadIcon />
 				</Fab>
@@ -153,6 +155,7 @@ export default function App(){
 					aria-label="Shuffle"
 					className={styles.fab}
 					onClick={handleShuffle}
+					sx={{ my: "10px" }}
 				>
 					<ShuffleIcon />
 				</Fab>
