@@ -2,6 +2,9 @@
 	position: absolute;
 	bottom: 16px;
 	right: 16px;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
 }
 
 .fab {

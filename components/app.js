@@ -100,9 +100,9 @@ export default function App(){
 	}, [updateState]);
 
 	const handleAdd = useCallback(() => {
-		const word = (wordRef.current.value !== undefined) ? wordRef.current.value : "";
-		const part = (partRef.current.value !== undefined) ? partRef.current.value : "";
-		const note = (noteRef.current.value !== undefined) ? noteRef.current.value : "";
+		const word = (wordRef.current.value !== undefined) ? wordRef.current.value.trim() : "";
+		const part = (partRef.current.value !== undefined) ? partRef.current.value.trim() : "";
+		const note = (noteRef.current.value !== undefined) ? noteRef.current.value.trim() : "";
 		wordRef.current.value = '';
 		partRef.current.value = '';
 		noteRef.current.value = '';
@@ -123,7 +123,7 @@ export default function App(){
 	}, [updateState]);
 
 	return (<>
-		<Stack className={styles['fab-div']} justifyContent="space-around" >
+		<div className={styles['fab-div']} >
 			<Tooltip title="Upload" placement="bottom-start">
 				<Fab
 					color="primary"
@@ -157,7 +157,7 @@ export default function App(){
 					<ShuffleIcon />
 				</Fab>
 			</Tooltip>
-		</Stack>
+		</div>
 		<Stack className={styles['word-list']}>
 			{
 				state.order.map((id, index) => {
