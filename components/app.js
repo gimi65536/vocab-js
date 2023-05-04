@@ -36,7 +36,7 @@ const vocabToJSON = (vocab) => {
 };
 
 const shuffle = (array) => {
-	for (let i = array.length; i > 0; i--) {
+	for (let i = array.length - 1; i > 0; i--) {
 		// The target can be i itself
 		const target = Math.floor(Math.random() * (i + 1));
 		[array[i], array[target]] = [array[target], array[i]];
