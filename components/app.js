@@ -123,7 +123,7 @@ export default function App(){
 	}, [updateState]);
 
 	return (<>
-		<div className={styles['fab-div']} >
+		<Stack className={styles['fab-div']} justifyContent="space-around" >
 			<Tooltip title="Upload" placement="bottom-start">
 				<Fab
 					color="primary"
@@ -157,7 +157,7 @@ export default function App(){
 					<ShuffleIcon />
 				</Fab>
 			</Tooltip>
-		</div>
+		</Stack>
 		<Stack className={styles['word-list']}>
 			{
 				state.order.map((id, index) => {
